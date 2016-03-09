@@ -13,6 +13,7 @@
     <string name="bookname_hint">Max. 70 characters</string>
     <string name="bookauthor_hint">Max. 70 characters</string>
     <string name="description_hint">Max. 255 characters</string>
+    <string name="msg_hint">Max. 255 characters</string>
     <string name="description">Description</string>
     <string name="save_btn">Save</string>
     <string name="cancel_btn">Cancel</string>

@@ -7,52 +7,91 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context=".SetPreferencesActivity" >
-    
+    tools:context=".SetPreferencesActivity"
+    android:background="#4e8c86">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@drawable/logo_sjsu"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Preference Storage View"
+            android:id="@+id/textView3"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-       	android:orientation="horizontal">
+       	android:orientation="horizontal"
+        android:weightSum="1">
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/book_name" />
-    
-    <EditText 
+        android:text="@string/book_name"
+        android:textColor="#ffffffff" />
+
+    <EditText
         android:id="@+id/bookname_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLength="70"
+        android:lines="2"
+        android:gravity="top|left"
+        android:maxLines="15"
         android:hint="@string/bookname_hint"
-        />
+        android:background="#ffffffff"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="0.46" />
     </LinearLayout>
-    
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="30dp">
     </View>
-    
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-       	android:orientation="horizontal">
+       	android:orientation="horizontal"
+        android:weightSum="1">
     
     <TextView
         android:id="@+id/book_author"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/book_author" 
-        />
+        android:text="@string/book_author"
+        android:textColor="#ffffffff" />
     
     <EditText 
         android:id="@+id/bookauthor_value"
+        android:lines="2"
+        android:gravity="top|left"
+        android:maxLines="15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLength="70"
         android:hint="@string/bookauthor_hint"
-        />
+        android:background="#ffffffff"
+        android:layout_marginLeft="28dp"
+        android:layout_weight="0.36" />
     </LinearLayout>
     
     <View
@@ -63,25 +102,34 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-       	android:orientation="horizontal">
-    
+       	android:orientation="horizontal"
+        android:weightSum="1">
+
     <TextView
         android:id="@+id/description"
+        android:lines="2"
+        android:gravity="top"
+        android:maxLines="15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/description" 
-        />
-    
-    <EditText 
+        android:text="@string/description"
+        android:textColor="#ffffffff" />
+
+        <EditText
         android:id="@+id/description_value"
+        android:lines="2"
+        android:gravity="top|left"
+        android:maxLines="15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLength="255"
         android:inputType="textMultiLine"
         android:hint="@string/description_hint"
-        />
+        android:background="#ffffffff"
+            android:layout_marginLeft="82dp"
+            android:layout_weight="0.21" />
     </LinearLayout>
-    
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="30dp">
@@ -90,23 +138,32 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-       	android:orientation="horizontal">
-    
+       	android:orientation="horizontal"
+        android:weightSum="1">
+
         <Button android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save_btn"
             android:onClick="onSave"
-           />
-        
+            android:width="50dp"
+            android:layout_weight="0.55"
+            android:textColor="#000000"
+            android:layout_marginTop="30dp"
+            android:background="#f1f68d" />
+
         <Button android:id="@+id/cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel_btn"
             android:onClick="onCancel"
-            />
-    
+            android:layout_weight="0.56"
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="#f1f68d" />
+
         </LinearLayout>
-    
+
 
 </LinearLayout>

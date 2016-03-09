@@ -22,7 +22,7 @@ import java.util.Date;
 
 public class SetPreferencesActivity extends Activity {
 	
-	public final static String STORE_PREFERENCES="storePrefFinal.txt";
+	public final static String STORE_PREFERENCES="storePref.txt";
 	//private static int counter;
 	public int counter=0;
 	private SimpleDateFormat s=new SimpleDateFormat("MM/dd/yyyy-hh:mm a");
@@ -103,7 +103,7 @@ public class SetPreferencesActivity extends Activity {
 				editor.commit();
 				
 				OutputStreamWriter out=new OutputStreamWriter(openFileOutput(STORE_PREFERENCES,MODE_APPEND));
-				String message="*************************************************\n\n\nSaved Preference "+counter+", "+s.format(new Date());
+				String message="\n\nSaved Preference "+counter+", "+s.format(new Date());
 				out.write(message);
 				out.close();
 			} 
@@ -123,14 +123,18 @@ public class SetPreferencesActivity extends Activity {
 		
 		//Go back to the main screen
 		Intent intent = new Intent(this,MainActivity.class);
+		finish();
 		startActivity(intent);
+
 		
 	}
 	
 	public void onCancel(View view)
 	{
 		Intent intent = new Intent(this,MainActivity.class);
+		finish();
 		startActivity(intent);
+
 	}
 
 }

@@ -6,48 +6,89 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SQLiteActivity" >
+    tools:context=".SQLiteActivity"
+    android:background="#4e8c86">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/logo_sjsu"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SQLite View"
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/msg"
+        android:layout_alignStart="@+id/msg"
+        android:layout_above="@+id/msg"
+        android:layout_alignRight="@+id/msg"
+        android:layout_alignEnd="@+id/msg" />
+
 
     <EditText
         android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_msg"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:ems="10"
-        android:inputType="textMultiLine" />
-
-    <TextView
-        android:id="@+id/enter_msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:text="@string/enter_msg"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:lines="10"
+        android:minLines="5"
+        android:gravity="top|left"
+        android:maxLines="15"
+        android:inputType="textMultiLine"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_marginTop="50dp"
+        android:background="#ffffff"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/imageView2"
+        android:maxLength="255"
+        android:hint="@string/msg_hint"
+        />
 
     <Button
         android:id="@+id/save_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/msg"
+        android:text="@string/save_msg"
+        android:onClick="saveMessage"
+        android:textColor="#ff000000"
+        android:background="#f1f68d"
         android:layout_below="@+id/msg"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="26dp"
-        android:text="@string/save_msg" 
-        android:onClick="saveMessage"/>
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="102dp" />
 
     <Button
         android:id="@+id/cancel_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/save_msg"
-        android:layout_alignBottom="@+id/save_msg"
-        android:layout_marginLeft="22dp"
-        android:layout_toRightOf="@+id/save_msg"
         android:text="@string/cancel_msg"
-        android:onClick="cancelMessage" />
+        android:onClick="cancelMessage"
+        android:textColor="#000000"
+        android:background="#f1f68d"
+        android:layout_alignTop="@+id/save_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Blog Message: "
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/msg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffffff" />
 
 </RelativeLayout>
